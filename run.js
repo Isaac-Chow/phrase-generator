@@ -64,11 +64,6 @@ function theme(){
 }
 
 function check(){
-    if(localStorage.getItem("theme")=="true"){
-        document.getElementById("nymode").checked = true
-        theme()
-    }
-
     if(localStorage.getItem("status")=="OK"){
         document.getElementById("source").disabled=false;
         document.getElementById("save").disabled=false;
@@ -76,6 +71,12 @@ function check(){
     if(localStorage.getItem("def")!==null&&localStorage.getItem("def")!==""){
         document.getElementById("source").value = localStorage.getItem("def")
     }
+    
+    if(localStorage.getItem("theme")=="true"){
+        document.getElementById("nymode").checked = true
+        theme()
+    }
+
 }
 
 function reset(){
