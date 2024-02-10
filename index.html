@@ -16,10 +16,21 @@
     <br>
     <br>
     <textarea id="gen" rows="20" cols="35"></textarea>
-    <br>
-    <br>
+    <hr id="sep">
     <label for="nymode">New Year theme</label>
     <input type="checkbox" id="nymode" onclick="theme()">
+    <br>
+    <br>
+    <a href="login.html"><button id="l">Endable advance features</button></a>
+    <br>
+    <br>
+    <p>Source text, endable advance features to access. Enter values seperated with a comma(no spaces!)</p>
+    <textarea disabled id="source" rows="20" cols="35">
+吉祥如意,財運亨通,龍鳳呈祥,身心同康,金玉滿堂,門庭若市,萬壽無疆,六六大順,龍騰虎躍,福壽安康,心想事成,萬事順心,春回大地,年年有餘,平安健康,業有所成,新春愉快,吉星高照,五世其昌,步步高升,洋洋向上,萬事勝意,力爭上游,年年高升,飛黃騰達,一元復始,身體健康,前程似錦,事事如意,龍年賀喜,工作順利,開市大發,三陽開泰,馬到成功,身壯力健,花開富貴,雙星報喜,迎春納福,福壽雙全,發財好市,開春大吉,好事連連,龍鳳吉祥,和氣生財,八仙過海,龍年祥雲,四季平安,萬事大吉,如魚得水,一本萬利,龍躍新程,事業有成,龍瑞盈門,出入平安,千紅萬紫,九九同心,鴻圖大展,二龍騰飛,龍來運轉,青春永駐,神采奕奕,富貴有餘,大吉大利,笑口常開,福到眼前,招財進寶,開市大吉,松柏氣節,龍年大吉,旗開得勝,如鶴如松,五福臨門,一路發財,龍馬精神,前途無量,生意興隆,積金至斗,風調雨順,七星高照,十全十美,財源廣進,恭賀新禧,闔家安康,財源滾滾,八方來財,家宅平安,久久長長,福星高照,龍舞春風,金龍報喜,恭喜發財,飛龍在天,歲歲平安,人強馬壯,龍年吉祥,一帆風順,橫財就手,吉星呵護,開市大信,竹報平安,萬事如意,龍躍鳳鳴,億萬斯年,全家安康,四季進財,闔家平安,生龍活虎,福龍迎祥,開泰民安,七星報喜,龍飛雲翔,百戰百勝,團團圓圓,大展鴻圖
+    </textarea>
+    <br>
+    <button onclick="reset()" id="r">Reset</button>
+    <button onclick="save()" id="save" disabled>Save as default</button>
     <script>
         check()
     </script>

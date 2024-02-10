@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <a class="btn btn-secondary m-1" href="index.html"><- Back</a>
+    <H1 class="m-2">Please enter the access code</H1>
+    <input class="m-2" id="code">
+    <button class="m-2 btn btn-success" onclick="verify()">Go</button>
+    <H3 class="m-2">Or login with an Isaac's FunStuff account</H3>
+    <a href="https://isaac-chow.github.io/FunStuff/dev/loginapi?redir=https://isaac-chow.github.io/phrase-generator/login.html/" class="m-2 btn btn-success">Login with Isaac's FunStuff account</a>
+    <script>
+        function urlParam(key){
+            const param = new
+                URLSearchParams(window.location.search)
+            return param.get(key)
+        }
+
+        function verify(){
+            if (document.getElementById("code").value == "NYPhraseGen"){
+                window.location.href = "index.html";
+                localStorage.setItem("status","OK")
+            } else {
+                alert("Incorrect code, try again.")
+            }
+        }
+
+        if (localStorage.getItem("status")=="OK"){
+            alert("Features already endabled!")
+            window.location.href = "index.html";
+        }
+
+        if(urlParam("status")!==null&&urlParam("status")!==""){
+            localStorage.setItem("status","OK")
+            window.location.href = "index.html";
+            //alert("Something went wrong, please contact Isaac for assistance or enter the code instead.")
+        }
+        
+    </script>
+</body>
+</html>
