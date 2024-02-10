@@ -72,10 +72,7 @@ function check(){
     if(localStorage.getItem("status")=="OK"){
         document.getElementById("source").disabled=false;
         document.getElementById("save").disabled=false;
-    } else {
-        // document.getElementById("source").disabled = "true";
     }
-
     if(localStorage.getItem("def")!==null&&localStorage.getItem("def")!==""){
         document.getElementById("source").value = localStorage.getItem("def")
     }
